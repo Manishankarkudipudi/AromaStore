@@ -1,0 +1,309 @@
+/* Reset and Base Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+    color: #333;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Variables for Consistency */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #333;
+    --white-color: #ffffff;
+    --light-greyish-blue: #B0BEC5;
+    --greyish-blue: #607D8B;
+}
+
+/* Navbar Styles */
+#navbar li a {
+    color: var(--light-greyish-blue);
+    transition: color 0.3s ease;
+}
+
+#navbar li:hover a {
+    color: var(--white-color);
+    text-decoration: underline;
+}
+
+/* Page Containers */
+.page-container {
+    padding-top: 120px;
+}
+
+
+
+/* Header */
+header {
+    background-color: var(--greyish-blue);
+    box-shadow: 0px 5px 5px rgba(108, 117, 125, 0.6);
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.buy-button {
+	background-color: var(--primary-color);
+	color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+/* Forms and Input */
+.form-control {
+    margin-top: 70px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: -55px;  /* Reduced spacing */
+}
+
+/* Error messages for validation in red */
+.error-msg {
+    color: red;
+    font-size: 12px; /* Adjust based on your preference */
+    margin-top: 2px;  /* If you need some space between the input field and the error message */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--light-greyish-blue);
+}
+.wrapper {
+    
+        max-width: 800px !important;
+    
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+.wrappercart{
+    max-width: 800px !important;
+    
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+}
+
+/* Styles for form elements */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  
+}
+
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for error messages */
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.help-block {
+    color: red;
+}
+
+
+/* Styles for links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Product Cards */
+.product {
+    margin-bottom: 15px;  
+    width: 80%;           
+    margin: 0 auto;       
+}
+
+.product .card-img-top {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    
+    display: block;
+}
+
+.card {
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-body {
+    padding: 15px;
+   
+}
+
+.card-title, .card-text, .price {
+    margin-bottom: 10px;
+}
+
+.fa-shopping-cart {
+    margin-right: 10px;
+}
+
+/* Grid Layout */
+.col-lg-3, .col-md-4, .col-sm-6 {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Miscellaneous */
+.mb-2, .my-2 {
+    margin-bottom: 5rem !important;
+}
+
+.larger-font {
+    font-size: 25px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure the button expands to fit its container */
+.btn.buy-button {
+    flex-grow: 1;
+}
+
+.cart-button, .signout-button {
+    border-radius: 20px;
+    padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cart-button:hover, .signout-button:hover {
+    transform: scale(1.05);
+}
+
+.cart-count {
+    background-color: red;
+    border-radius: 50%;
+    padding: 2px 6px;
+    margin-left: 8px;
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.signout-button {
+    background-color: #ff4d4d;  
+    color: var(--white-color);
+    margin-left: 20px;
+    padding: 6px 16px;
+}
+
+/* Custom Navbar */
+.navbar.navbar-expand-lg {
+    height: 100px;
+    background-color: #001f3f !important;
+}
+
+.navbar.navbar-expand-lg .navbar-brand, .navbar.navbar-expand-lg .nav-link {
+    color: var(--white-color);
+}
+
+/* Footer */
+.footer-container {
+    background-color: #001f3f !important;
+    color: #ECEFF1;
+    padding: 1rem;
+}
+
+
+.quantity-modifier button {
+    transition: background-color 0.3s ease;
+}
+
+.quantity-modifier button:hover {
+    background-color: #ccc;
+}
+.has-error {
+    border: 1px solid red;
+}
+.groupnames{
+    background-color:#c3c3c4 ;
+   
+
+}
